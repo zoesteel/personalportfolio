@@ -12,9 +12,7 @@ return (
             </div>
         </div> 
     );
-}
-
-  
+}  
 //class Modal extends Component {
     // constructor(props){
     //     super(props);

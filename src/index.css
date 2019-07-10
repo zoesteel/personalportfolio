@@ -35,6 +35,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+img {
+  max-width: 100%; height: auto;
+}
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /* Chrome 10-25, Safari 5.1-6 */
 /* Chrome 10-25, Safari 5.1-6 */
@@ -48,9 +51,18 @@ h1 {
 h2, h3 {
   font-size: 1.75rem; }
 
+h3 {
+  /* line-height: 3rem; */
+  margin: 1.5rem 0;
+}
+
 body {
   font-family: "Work Sans";
   line-height: 1.5; }
+
+p {
+  margin: 0.75rem 0;
+}
 
 a {
   color: #4d0fc9;
@@ -59,7 +71,8 @@ a {
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all .2s ease-in;
-  border-radius: 1px; }
+  border-radius: 1px; 
+  line-height: 1.5rem;}
 
 a:hover {
   background-position: 0 0;
@@ -101,6 +114,10 @@ body {
     .content {
       grid-column: 2 / span 3; } }
 
+.links a {
+  line-height: 2.5rem;
+}
+
 .projects {
   display: grid;
   grid-column-gap: 15px;
@@ -113,7 +130,8 @@ body {
   .projects a {
     color: #000;
     padding: 0px;
-    border-radius: 3px; }
+    border-radius: 3px; 
+    text-decoration: none;}
     .projects a:hover {
       color: #fff; }
 
@@ -130,9 +148,32 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: "Cutive"; }
-  .project:hover, .project:active {
-    background: transparent; }
+  font-family: "Cutive";
+  transition: all .2s ease-in;
+  background-position: 100% 0;
+  background-size: 200% 100%; }
+ 
+.project:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #4d0f65, #4d0fc9, 50%, transparent 20%, transparent); 
+  background-position: 0 0;
+  }
+
+.project h3 {
+  line-height: 2rem;
+}
+
+.project-img {
+  max-width: 65%;
+  border-radius: 2.5rem;
+  display: block;
+  margin: 1.75rem auto;
+  transition: all 0.3s ease-in;
+}
+
+.project-img:hover {
+  border-radius: 1px;
+}
 
 .footer {
   grid-column: 1 / span 5;
@@ -195,11 +236,32 @@ body {
   cursor: pointer; }
 
 
-  .display-block {
-    display: block;
-  }
-  
-  .display-none {
-    display: none;
-  }
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
+
+/* Sub pages */
+
+.project-title {
+  font-family: "Cutive"; 
+  font-size: 1.75rem; 
+  line-height: 4rem;
+}
+
+.homelink {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  margin: 1.5rem 0;
+  line-height: 5rem;
+}
+
+.tools {
+  font-weight: 500;
+  text-decoration: underline;
+}
