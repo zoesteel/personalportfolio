@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { HashRouter, Route, Switch, withRouter } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
@@ -15,10 +15,12 @@ import './App.css';
 class App extends Component {
     render() {
         return (
+            
             <div className="Portfolio">     
                 <div className="wrapper">
                     <Header />
-                    <div className="content">            
+                    <div className="content">  
+                    <HashRouter basename='/'>          
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/portfolio" component={Portfolio} />
@@ -27,7 +29,8 @@ class App extends Component {
                             <Route path="/dynaco" component={Dynaco} />
                             <Route path="/dogwood" component={Dogwood} />
                             <Route path="/inwardedward" component={InwardEdward} />
-                        </Switch>            
+                        </Switch>    
+                    </HashRouter>        
                     </div>{/* end content  */}
                 </div>{/* end wrapper */}
                 <Footer />
