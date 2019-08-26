@@ -1,13 +1,267 @@
-body {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; height: auto;
+}
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Chrome 10-25, Safari 5.1-6 */
+/* Chrome 10-25, Safari 5.1-6 */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+h1, h2, h3 {
+  font-family: "Cutive"; }
+
+h1 {
+  font-size: 2.25rem; }
+
+h2, h3 {
+  font-size: 1.75rem; }
+
+h3 {
+  /* line-height: 3rem; */
+  margin: 1.5rem 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  font-family: "Work Sans";
+  line-height: 1.5; }
+
+p {
+  margin: 0.75rem 0;
+}
+
+a {
+  color: #4d0fc9;
+  padding: 5px 1px 5px 1px;
+  background-image: linear-gradient(to right, #4d0f65, #4d0fc9, 50%, transparent 20%, transparent);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .2s ease-in;
+  border-radius: 1px; 
+  line-height: 1.5rem;}
+
+a:hover {
+  background-position: 0 0;
+  color: #fff; }
+
+  p {  
+    text-align: justify; }
+
+body {
+  background: #B24592;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F15F79, #B24592);
+  background: linear-gradient(to right, #F15F79, #B24592);
+  /* background: #fff;  /* fallback for old browsers */ }
+
+.wrapper {
+  margin: 15px;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(5, 1fr); }
+
+.header {
+  justify-content: center;
+  grid-column: 1 / span 5;
+  padding-top: 30px; }
+  @media (min-width: 500px) {
+    .header {
+      grid-column: span 3 / 5; } }
+  @media (min-width: 1000px) {
+    .header {
+      grid-column: span 3 / 5; } }
+
+.content {
+  grid-column: 1 / span 5; }
+  @media (min-width: 500px) {
+    .content {
+      grid-column: 2 / span 3; } }
+  @media (min-width: 1000px) {
+    .content {
+      grid-column: 2 / span 3; } }
+
+.links a {
+  line-height: 2.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 20px; }
+  @media (min-width: 1000px) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr); } }
+  .projects a {
+    color: #000;
+    padding: 0px;
+    border-radius: 3px; 
+    text-decoration: none;}
+    .projects a:hover {
+      color: #fff; }
+
+.project {
+  background: #6b536a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6b536a, #b094aa);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6b536a, #b094aa);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ #c09696 */
+  padding: 10px;
+  border-radius: 4px;
+  height: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Cutive";
+  transition: all .2s ease-in;
+  background-position: 100% 0;
+  background-size: 200% 100%; }
+ 
+.project:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #4d0f65, #4d0fc9, 50%, transparent 20%, transparent); 
+  background-position: 0 0;
+  }
+
+.project h3 {
+  line-height: 2rem;
+}
+
+.project-img {
+  max-width: 65%;
+  border-radius: 2.5rem;
+  display: block;
+  margin: 1.75rem auto;
+  transition: all 0.3s ease-in;
+}
+
+.project-img:hover {
+  border-radius: 1px;
+}
+
+.footer {
+  grid-column: 1 / span 5;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  padding: 1rem;
+}
+  @media (min-width: 500px) {
+    .footer {
+      grid-column: 1 / span 5; } }
+
+/* The Modal (background) */
+.modal {
+
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background: #B24592;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F15F79, #B24592);
+  background: linear-gradient(to right, #F15F79, #B24592); }
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+/* The Close Button */
+.close {
+  color: #fff;
+  float: right;
+  margin-right: 20px;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #b094aa;
+  text-decoration: none;
+  cursor: pointer; }
+
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
+
+/* Sub pages */
+
+.project-title {
+  font-family: "Cutive"; 
+  font-size: 1.75rem; 
+  line-height: 4rem;
+}
+
+.homelink {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  margin: 1.5rem 0;
+  line-height: 5rem;
+}
+
+.tools {
+  font-weight: 500;
+  text-decoration: underline;
 }

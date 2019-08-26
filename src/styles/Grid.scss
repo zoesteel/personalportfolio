@@ -1,0 +1,31 @@
+.wrapper {
+    margin: 15px;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(5, 1fr); 
+}
+  
+.header {
+justify-content: center;
+grid-column: 1 / span 5;
+padding-top: 30px; }
+@media (min-width: 500px) {
+    .header {
+    grid-column: span 3 / 5; } 
+}
+@media (min-width: 1000px) {
+    .header {
+    grid-column: span 3 / 5; } 
+}
+
+.content {
+grid-column: 1 / span 5; 
+}
+@media (min-width: 500px) {
+    .content {
+    grid-column: 2 / span 3; } 
+}
+@media (min-width: 1000px) {
+    .content {
+    grid-column: 2 / span 3; }
+}

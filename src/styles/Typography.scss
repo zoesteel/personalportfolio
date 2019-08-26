@@ -1,0 +1,43 @@
+h1, h2, h3 {
+    font-family: "Cutive"; }
+  
+  h1 {
+    font-size: 2.25rem; }
+  
+  h2, h3 {
+    font-size: 1.75rem; }
+  
+  h3 {
+    /* line-height: 3rem; */
+    margin: 1.5rem 0;
+  }
+  
+  body {
+    font-family: "Work Sans";
+    line-height: 1.5; }
+  
+  p {
+    margin: 0.75rem 0;
+  }
+  
+  a {
+    color: #4d0fc9;
+    padding: 5px 1px 5px 1px;
+    background-image: linear-gradient(to right, #4d0f65, #4d0fc9, 50%, transparent 20%, transparent);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .2s ease-in;
+    border-radius: 1px; 
+    line-height: 1.5rem;}
+  
+  a:hover {
+    background-position: 0 0;
+    color: #fff; }
+  
+  p {  
+    text-align: justify; }
+  
+    .links a {
+      line-height: 2.5rem;
+    }
+    

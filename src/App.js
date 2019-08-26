@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { HashRouter, Route, Switch, withRouter } from 'react-router-dom';
+import Header from './Header';
+import Home from './Home';
+import Footer from './Footer';
+import Portfolio from './Portfolio';
+import Radial from './Radial';
+import JimRhodes from './JimRhodes';
+import Dynaco from './Dynaco';
+import Dogwood from './Dogwood';
+import InwardEdward from './InwardEdward';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            
+            <div className="Portfolio">     
+                <div className="wrapper">
+                    <Header />
+                    <div className="content">  
+                    <HashRouter basename='/'>          
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/portfolio" component={Portfolio} />
+                            <Route path="/radial" component={Radial} />
+                            <Route path="/jimrhodes" component={JimRhodes} />
+                            <Route path="/dynaco" component={Dynaco} />
+                            <Route path="/dogwood" component={Dogwood} />
+                            <Route path="/inwardedward" component={InwardEdward} />
+                        </Switch>    
+                    </HashRouter>        
+                    </div>{/* end content  */}
+                </div>{/* end wrapper */}
+                <Footer />
+            </div>
+        )
+    }
 }
-
-export default App;
+export default withRouter(App);
